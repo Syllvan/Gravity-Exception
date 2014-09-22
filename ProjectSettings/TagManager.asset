@@ -3,6 +3,15 @@
 --- !u!78 &1
 TagManager:
   tags:
+  - ground
+  - Crate
+  - Enemy
+  - Wall
+  - Obstacle
+  - Bullet
+  - BombPickup
+  - ExplosionFX
+  - HealthBar
   - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX
@@ -12,9 +21,9 @@ TagManager:
   Builtin Layer 5: UI
   Builtin Layer 6: 
   Builtin Layer 7: 
-  User Layer 8: Player
-  User Layer 9: 
-  User Layer 10: 
+  User Layer 8: 
+  User Layer 9: Player
+  User Layer 10: Ground
   User Layer 11: 
   User Layer 12: 
   User Layer 13: 
@@ -39,21 +48,21 @@ TagManager:
   m_SortingLayers:
   - name: Background
     userID: 2
-    uniqueID: 3797769071
+    uniqueID: 1535931219
     locked: 1
+  - name: Character
+    userID: 4
+    uniqueID: 2511236001
+    locked: 0
   - name: Default
     userID: 0
     uniqueID: 0
     locked: 0
-  - name: Player
-    userID: 1
-    uniqueID: 774393359
-    locked: 0
   - name: Foreground
     userID: 3
-    uniqueID: 1938932465
+    uniqueID: 1024582385
     locked: 0
-  - name: GUI
-    userID: 4
-    uniqueID: 2394512163
+  - name: UI
+    userID: 5
+    uniqueID: 149272721
     locked: 0
