@@ -33,6 +33,8 @@ public class Player : MonoBehaviour
 	{
 		// The player is grounded if a circlecast to the groundcheck position hits anything designated as ground
 		grounded = Physics2D.OverlapCircle(groundCheck.position, groundedRadius, whatIsGround);
+		if(grounded)
+			SetGravityOnOff (true);
 		//anim.SetBool("Ground", grounded);
 		
 		// Set the vertical animation
@@ -68,6 +70,10 @@ public class Player : MonoBehaviour
 			//anim.SetBool("Ground", false);
 			rigidbody2D.AddForce (new Vector2 (0f, jumpForce));
 		}
+		else if(!grounded && jump)
+		{
+			SetGravityOnOff(!gravity);
+		}
 	}
 	
 	
@@ -82,9 +88,9 @@ public class Player : MonoBehaviour
 		transform.localScale = theScale;
 	}
 
-	public void SwapGravity ()
+	public void SetGravityOnOff (bool g)
 	{
-		gravity = !gravity;
+		gravity = g;
 		rigidbody2D.gravityScale = gravity ? gravityScale : 0.0f;
 	}
 }

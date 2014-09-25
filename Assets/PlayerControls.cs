@@ -14,8 +14,8 @@ public class PlayerControls : MonoBehaviour
 	
 	void Update ()
 	{
-		jump = Input.GetButtonDown ("Jump");
-		swap = Input.GetButtonDown ("Fire1");
+		if (Input.GetButtonDown("Jump")) jump = true;
+		//swap = Input.GetButtonDown ("Fire1");
 	}
 	
 	void FixedUpdate()
@@ -30,9 +30,11 @@ public class PlayerControls : MonoBehaviour
 		character.Move( h, crouch , jump );
 
 		// Swap gravity
-		if (swap) character.SwapGravity ();
-		
+		//if (swap) character.SwapGravity ();
+
+
 		// Reset the jump input once it has been used.
+		//swap = false;
 		jump = false;
 	}
 }
