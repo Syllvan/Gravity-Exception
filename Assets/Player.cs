@@ -16,6 +16,7 @@ public class Player : MonoBehaviour
 	Transform ceilingCheck;								// A position marking where to check for ceilings
 	float ceilingRadius = .01f;							// Radius of the overlap circle to determine if the player can stand up
 	float gravityScale;
+	int gravityCounter = 0;
 	//Animator anim;										// Reference to the player's animator component.
 	
 	
@@ -46,7 +47,8 @@ public class Player : MonoBehaviour
 	{		
 		//only control the player if grounded is turned on
 		if(grounded)
-		{			
+		{	
+			gravityCounter = 0;
 			// The Speed animator parameter is set to the absolute value of the horizontal input.
 			//anim.SetFloat("Speed", Mathf.Abs(move));
 			
@@ -70,9 +72,10 @@ public class Player : MonoBehaviour
 			//anim.SetBool("Ground", false);
 			rigidbody2D.AddForce (new Vector2 (0f, jumpForce));
 		}
-		else if(!grounded && jump)
+		else if(!grounded && jump && gravityCounter < 2)
 		{
 			SetGravityOnOff(!gravity);
+			gravityCounter++;
 		}
 	}
 	
