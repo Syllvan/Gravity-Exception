@@ -87,9 +87,10 @@ public class Player : MonoBehaviour
 			noGravity_start = Time.time;
 		}
 		// if gravity has been false for more than 2 seconds (allowedNoGravityTime), it is set to true
-		else if(noGravity_current - noGravity_start > allowedNoGravityTime)
+		else if(gravity == false && noGravity_current - noGravity_start > allowedNoGravityTime)
 		{
 			SetGravityOnOff(true);
+			gravityCounter++;
 		}
 	}
 	
