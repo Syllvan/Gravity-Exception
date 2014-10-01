@@ -17,7 +17,10 @@ public class Player : MonoBehaviour
 	float ceilingRadius = .01f;							// Radius of the overlap circle to determine if the player can stand up
 	float gravityScale;
 	int gravityCounter = 0;
-	Vector2 savePosition;
+	Vector2 savePosition;								// counter to determine how many times gravitybutton has been pressed
+	float noGravityStart = .0f;							// timer that records when noGravity starts
+	float noGravityCurrent = .0f;						// timer that records surrent noGravity time
+	float allowedNoGravityTime = 2f;
 	//Animator anim;										// Reference to the player's animator component.
 	
 	
@@ -46,7 +49,10 @@ public class Player : MonoBehaviour
 	
 	
 	public void Move(float move, bool crouch, bool jump)
-	{		
+	{	
+		//Current time is updated regularly
+		noGravityCurrent = Time.time;
+
 		//only control the player if grounded is turned on
 		if(grounded)
 		{	
@@ -74,9 +80,18 @@ public class Player : MonoBehaviour
 			//anim.SetBool("Ground", false);
 			rigidbody2D.AddForce (new Vector2 (0f, jumpForce));
 		}
+		// gravitybutton is unable to be pressed more than two times untill player hits the ground again
 		else if(!grounded && jump && gravityCounter < 2)
 		{
 			SetGravityOnOff(!gravity);
+			gravityCounter++;
+			//when the gravity is set to false for the first time, start timer
+			noGravityStart = Time.time;
+		}
+		// if gravity has been false for more than 2 seconds (allowedNoGravityTime), it is set to true
+		else if(gravity == false && noGravityCurrent - noGravityStart > allowedNoGravityTime)
+		{
+			SetGravityOnOff(true);
 			gravityCounter++;
 		}
 	}
