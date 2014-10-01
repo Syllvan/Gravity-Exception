@@ -17,6 +17,7 @@ public class Player : MonoBehaviour
 	float ceilingRadius = .01f;							// Radius of the overlap circle to determine if the player can stand up
 	float gravityScale;
 	int gravityCounter = 0;
+	Vector2 savePosition;
 	//Animator anim;										// Reference to the player's animator component.
 	
 	
@@ -26,6 +27,7 @@ public class Player : MonoBehaviour
 		groundCheck = transform.Find("GroundCheck");
 		ceilingCheck = transform.Find("CeilingCheck");
 		gravityScale = rigidbody2D.gravityScale;
+		savePosition = transform.position;
 		//anim = GetComponent<Animator>();
 	}
 	
@@ -95,5 +97,16 @@ public class Player : MonoBehaviour
 	{
 		gravity = g;
 		rigidbody2D.gravityScale = gravity ? gravityScale : 0.0f;
+	}
+
+	void OnTriggerEnter2D(Collider2D collider) {
+		if(collider.CompareTag("EndOfLevel"))
+		{
+			Application.LoadLevel("Menu"); // "Stage1" is the scene name
+		}
+		else if(collider.CompareTag("OutOfBounds"))
+		{
+			transform.position = savePosition;
+		}
 	}
 }

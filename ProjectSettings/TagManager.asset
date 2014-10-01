@@ -4,11 +4,11 @@
 TagManager:
   tags:
   - ground
-  - Crate
+  - EndOfLevel
   - Enemy
   - Wall
   - Obstacle
-  - Bullet
+  - OutOfBounds
   - BombPickup
   - ExplosionFX
   - HealthBar
