@@ -1,0 +1,158 @@
+fileFormatVersion: 2
+guid: c0dd7b08202db1144b2f343199c8ecd9
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: EvilLord
+    21300002: EvilLord_0
+    21300004: MinionLegBehind
+    21300006: MinionLegFront
+    21300008: LordHead
+    21300010: MinionArmBack
+    21300012: MinionBody
+    21300014: LordBody
+    21300016: MinionArmFront
+    21300018: EvilLord_8
+    21300020: LordStaff
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: EvilLord_0
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 443
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MinionLegBehind
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 412
+        width: 39
+        height: 40
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MinionLegFront
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 411
+        width: 44
+        height: 39
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: LordHead
+      rect:
+        serializedVersion: 2
+        x: 483
+        y: 442
+        width: 33
+        height: 47
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MinionArmBack
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 377
+        width: 111
+        height: 65
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MinionBody
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 284
+        width: 60
+        height: 104
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: LordBody
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 247
+        width: 154
+        height: 157
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MinionArmFront
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 252
+        width: 100
+        height: 112
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: EvilLord_8
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 313
+        width: 4
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: LordStaff
+      rect:
+        serializedVersion: 2
+        x: 359
+        y: 152
+        width: 74
+        height: 209
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
