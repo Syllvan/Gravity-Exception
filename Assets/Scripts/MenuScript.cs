@@ -55,14 +55,15 @@ public class MenuScript : MonoBehaviour
 
 	void OnGUI ()
 	{
-		const int buttonWidth = 420;
-		const int buttonHeight = 80;
-		const int buttonMargin = 35;
+		int buttonWidth = (int)(Screen.height*0.5f);
+		int buttonHeight = (int)(Screen.height*0.1f);
+		int buttonMargin = (int)(Screen.height*0.04f);
 		int startHeight = (int)(Screen.height * 0.4f);
 		int startWidth = (int)(Screen.width * 0.2f);
 		
 		// Set the skin to use
 		GUI.skin = skin;
+		skin.button.fontSize = (int)(buttonHeight*0.6f);
 		
 		// Draw a button to start the game
 		GUI.SetNextControlName ("Start");
