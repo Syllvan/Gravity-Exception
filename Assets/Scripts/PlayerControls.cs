@@ -4,7 +4,7 @@ using UnityEngine;
 public class PlayerControls : MonoBehaviour 
 {
 	private Player character;
-	private bool jump, swap;
+	private bool jump;
 	
 	
 	void Awake()
@@ -21,20 +21,14 @@ public class PlayerControls : MonoBehaviour
 	void FixedUpdate()
 	{
 		// Read the inputs.
-		bool crouch = Input.GetKey(KeyCode.LeftControl);
 		float h = Input.GetAxis("Horizontal");
 		//if (Input.GetButtonDown("Jump")) jump = true;
 		 
 
 		// Pass all parameters to the character control script.
-		character.Move( h, crouch , jump );
-
-		// Swap gravity
-		//if (swap) character.SwapGravity ();
-
+		character.Move( h, jump );
 
 		// Reset the jump input once it has been used.
-		//swap = false;
 		jump = false;
 	}
 }

@@ -3945,7 +3945,7 @@ MonoBehaviour:
   - {fileID: 1562806681}
   - {fileID: 2109284729}
   - {fileID: 139540132}
-  parallaxScale: -1
+  parallaxScale: -.800000012
   parallaxReductionFactor: .699999988
   smoothing: 10
 --- !u!4 &1962273070

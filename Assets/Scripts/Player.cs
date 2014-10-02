@@ -49,7 +49,7 @@ public class Player : MonoBehaviour
 	}
 	
 	
-	public void Move(float move, bool crouch, bool jump)
+	public void Move(float move, bool jump)
 	{	
 		//Current time is updated regularly
 		noGravityCurrent = Time.time;
