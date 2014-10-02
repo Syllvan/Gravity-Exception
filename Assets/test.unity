@@ -2306,15 +2306,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1962273068}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 60dd6518a1eff44a3b347b7c0a20f239, type: 3}
+  m_Script: {fileID: 11500000, guid: 9540345b005166c43973622ae5a86dfe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  backgrounds:
-  - {fileID: 1169683423}
-  - {fileID: 139540132}
-  parallaxScale: -1
-  parallaxReductionFactor: .699999988
-  smoothing: 10
+  backgrounds: []
+  parallaxScale: 0
+  parallaxReductionFactor: 0
+  smoothing: 0
 --- !u!4 &1962273070
 Transform:
   m_ObjectHideFlags: 0
