@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEditor;
 
 public class Player : MonoBehaviour 
 {
@@ -48,7 +49,7 @@ public class Player : MonoBehaviour
 	}
 	
 	
-	public void Move(float move, bool crouch, bool jump)
+	public void Move(float move, bool jump)
 	{	
 		//Current time is updated regularly
 		noGravityCurrent = Time.time;
@@ -117,7 +118,11 @@ public class Player : MonoBehaviour
 	void OnTriggerEnter2D(Collider2D collider) {
 		if(collider.CompareTag("EndOfLevel"))
 		{
-			Application.LoadLevel("Menu"); // "Stage1" is the scene name
+			int nextLevel = Application.loadedLevel + 1;
+			if(nextLevel < Application.levelCount)
+				Application.LoadLevel(nextLevel);
+			else
+				Application.LoadLevel("Menu");
 		}
 		else if(collider.CompareTag("OutOfBounds"))
 		{
