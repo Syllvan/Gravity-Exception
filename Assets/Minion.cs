@@ -22,7 +22,7 @@ public class Minion : MonoBehaviour
 	void Awake()
 	{
 		// Setting up the references.
-		ren = transform.Find("MinionBody").GetComponent<SpriteRenderer>();
+		ren = transform.Find("minionbody").GetComponent<SpriteRenderer>();
 		frontCheck = transform.Find("frontCheck").transform;
 		//score = GameObject.Find("Score").GetComponent<Score>();
 	}

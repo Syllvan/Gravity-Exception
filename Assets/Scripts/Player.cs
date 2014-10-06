@@ -21,7 +21,7 @@ public class Player : MonoBehaviour
 	float noGravityStart = .0f;							// timer that records when noGravity starts
 	float noGravityCurrent = .0f;						// timer that records surrent noGravity time
 	float allowedNoGravityTime = 2f;
-	//Animator anim;										// Reference to the player's animator component.
+	Animator anim;										// Reference to the player's animator component.
 	
 	
 	void Awake()
@@ -31,7 +31,7 @@ public class Player : MonoBehaviour
 		ceilingCheck = transform.Find("CeilingCheck");
 		gravityScale = rigidbody2D.gravityScale;
 		savePosition = transform.position;
-		//anim = GetComponent<Animator>();
+		anim = GetComponent<Animator>();
 	}
 	
 	
@@ -41,10 +41,10 @@ public class Player : MonoBehaviour
 		grounded = Physics2D.OverlapCircle(groundCheck.position, groundedRadius, whatIsGround);
 		if(grounded)
 			SetGravityOnOff (true);
-		//anim.SetBool("Ground", grounded);
+		anim.SetBool("Ground", grounded);
 		
 		// Set the vertical animation
-		//anim.SetFloat("vSpeed", rigidbody2D.velocity.y);
+		anim.SetFloat("vSpeed", rigidbody2D.velocity.y);
 	}
 	
 	
@@ -58,7 +58,7 @@ public class Player : MonoBehaviour
 		{	
 			gravityCounter = 0;
 			// The Speed animator parameter is set to the absolute value of the horizontal input.
-			//anim.SetFloat("Speed", Mathf.Abs(move));
+			anim.SetFloat("Speed", Mathf.Abs(move));
 			
 			// Move the character
 			rigidbody2D.velocity = new Vector2(move * maxSpeed, rigidbody2D.velocity.y);
@@ -77,7 +77,7 @@ public class Player : MonoBehaviour
 		if (grounded && jump)
 		{
 			// Add a vertical force to the player.
-			//anim.SetBool("Ground", false);
+			anim.SetBool("Ground", false);
 			rigidbody2D.AddForce (new Vector2 (0f, jumpForce));
 		}
 		// gravitybutton is unable to be pressed more than two times untill player hits the ground again
